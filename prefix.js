@@ -8,11 +8,11 @@ var longestCommonPrefix = function(strs) {
   const count = {};
   for (const word of strs) {
     let num = 0
-    word.split('')
-    while(true) {
-      const startsWith = strs.filter((moi) => moi.startsWith(word[0]));
-      startsWith.length > 1
-    }
+    // word.split('')
+    // while(true) {
+    //   const startsWith = strs.filter((moi) => moi.startsWith(word[0]));
+    //   startsWith.length > 1
+    // }
     if (word.length < 3) {
       word.split('')
       let pre = word.slice(0,1)
