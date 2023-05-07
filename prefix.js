@@ -4,6 +4,10 @@
  */
 
 var longestCommonPrefix = function(strs) {
+  if (strs.length < 2 ) {
+    console.log("boy")
+    return strs[0]
+  }
   if (strs.length < 2 && strs[0].split(' ').join('') === "") {
     return ""
   }
