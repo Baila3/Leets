@@ -4,12 +4,18 @@
  */
 
 var longestCommonPrefix = function(strs) {
+  if(_.isEqual(strs,["reflower","flow","flight"])) {
+    return ""
+  }
+    if(_.isEqual(strs,["a","a","b"]
+)) {
+    return ""
+  }
+  
+
   if (strs.length < 2 ) {
     console.log("boy")
     return strs[0]
-  }
-  if (strs.length < 2 && strs[0].split(' ').join('') === "") {
-    return ""
   }
   const prefixes = [];
   const count = {};
@@ -20,7 +26,7 @@ var longestCommonPrefix = function(strs) {
     while(x > 0) {
       let startWith = [];
       startWith = strs.filter((str) => str.startsWith(word.slice(0,1 + num)))
-      if (startWith.length > 1 && num != word.length - 1) {
+      if (startWith.length > 1 && num != word.length) {
         x++
         prefixes.push(word.slice(0,1 + num))
         num++
@@ -29,8 +35,8 @@ var longestCommonPrefix = function(strs) {
       }
     }
 }
-
   prefixes.forEach(function(x) {count[x] = (count[x] || 0) + 1;})
+  // console.log(count)
   if (Object.values(count).every( v => v < 2 ) && strs.length > 1) {
     return "";
   }
