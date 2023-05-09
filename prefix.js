@@ -4,19 +4,6 @@
  */
 
 var longestCommonPrefix = function(strs) {
-  if(_.isEqual(strs,["reflower","flow","flight"])) {
-    return ""
-  }
-    if(_.isEqual(strs,["a","a","b"]
-)) {
-    return ""
-  }
-  
-
-  if (strs.length < 2 ) {
-    console.log("boy")
-    return strs[0]
-  }
   const prefixes = [];
   const count = {};
   for (const word of strs) {
