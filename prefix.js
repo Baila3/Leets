@@ -10,7 +10,7 @@ var longestCommonPrefix = function(strs) {
   }
 
   while (y < strs.length ) {
-    if (strs[0][0] != strs[y][0] || strs[0] == "") {
+    if (strs[0][0] != strs[y][0]) {
       return ""
     }
     y += 1
@@ -34,7 +34,6 @@ var longestCommonPrefix = function(strs) {
     }
 }
   prefixes.forEach(function(x) {count[x] = (count[x] || 0) + 1;})
-  // console.log(count)
   if (Object.values(count).every( v => v < 2 ) && strs.length > 1) {
     return "";
   }
