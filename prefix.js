@@ -4,6 +4,7 @@
  */
 
 var longestCommonPrefix = function(strs) {
+  console.log(strs[0][0])
   const prefixes = [];
   const count = {};
   for (const word of strs) {
@@ -32,3 +33,7 @@ var longestCommonPrefix = function(strs) {
   const longestPrefix = long.find(pre => pre.length === Math.max(...(long.map(el => el. length))));
   return longestPrefix
 };
+
+console.log(longestCommonPrefix(["flower", "bing"]))
+
+
