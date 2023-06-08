@@ -12,24 +12,26 @@ var generateParenthesis = function(n) {
   const parent = son1 + son2
   permutations.push(parent);
   let parentheses = parent.split("");
-  let x = n;
-  let v = n - 1
-  for (let j = 0; j < n -1   ; j++) {
+  let x = n + 1;
+  let v = 2
+  for (let j = 0; j < n ; j++) {
+    if (j >= n - 2) {
+      v = -1
+      v += n -j
+    }
     parentheses.splice(x - v, 0, parentheses.splice(x, 1)[0]);
     permutations.push(parentheses.join(""));
-    x += 1;
-    v -= 1
+
   }
-  x = 0
-  v = n - 1
+  // x = 1
+  // v = n - 1
   // for (let d = 0; d < n - 1 ; d++) {
   //   parentheses.splice(x + v, 0, parentheses.splice(x, 1)[0]);
   //   permutations.push(parentheses.join(""));
   //   x += 1;
-  //   v -= 1
   // }
   
   return permutations;
 };
 
-console.log(generateParenthesis(1));
+console.log(generateParenthesis(4));
