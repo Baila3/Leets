@@ -10,13 +10,16 @@ const equalPairs = function(grid) {
     }
    
     big.push(boy);
-    console.log(boy)
     if (nGrid.includes(JSON.stringify(boy))) {
-      big.pop()
+      let index = nGrid.indexOf(JSON.stringify(boy))
+      nGrid.splice(index, 1)
       ans++;
     }
     num++;
   }
+  console.log(nGrid)
+
+  console.log(big)
   return ans;
 };
 
